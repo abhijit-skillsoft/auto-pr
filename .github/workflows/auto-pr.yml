@@ -22,7 +22,7 @@ jobs:
         AWS_S3_BUCKET: 'v${{ env.GITHUB_RUN_NUMBER_WITH_OFFSET }}'
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        SOURCE_DIR: "build"
+        SOURCE_DIR: "."
       run: |
         set -e
         if [ -z "$AWS_S3_BUCKET" ]; then
